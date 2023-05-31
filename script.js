@@ -9,7 +9,7 @@ let pokemonStatChart = new Chart(myChart,{
     data: {
         labels:["HP", "Attack","Defense", "Special Attack", "Special Defense", "Speed", ],
         datasets:[{
-            label:"Venusaur",
+            label:"Input 'Mon",
             data:[
                 80, 82, 83, 100, 100, 80
             ],
@@ -19,7 +19,7 @@ let pokemonStatChart = new Chart(myChart,{
             hoverBorderColor:"grey",
             hoverBorderWidth:"2",
         }, {
-            label:"Charizard",
+            label:"Arceus",
             data:[
                 78, 84, 78, 109, 85, 100
             ],
