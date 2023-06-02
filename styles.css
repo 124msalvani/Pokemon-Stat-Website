@@ -1,11 +1,11 @@
-.row{
-    border: 5px solid grey;
+.bold{
+    font-weight: 400;
 }
 
-.col{
-    border: 5px solid navy;
+.bg-navy{
+    background-color: navy;
 }
 
-.container{
-    border: 5px solid rgb(83, 16, 137);
+.border-1{
+    border: 5px solid black;
 }
