@@ -4,6 +4,7 @@ Chart.defaults.font.family="Lato";
 Chart.defaults.font.size= 18;
 Chart.defaults.color= "black"; 
 
+
 let pokemonStatChart = new Chart(myChart,{
     type: "radar", //bar, horizontalBar, pie, line, doughnut, radar. polarArea
     data: {
@@ -39,8 +40,10 @@ let pokemonStatChart = new Chart(myChart,{
         }]
     },
     options: {
-        legend: {
-          position: 'bottom'
+        plugins: {
+            legend: {
+                position: "bottom"
+            }
         }
-      }
+    }
 }); 
