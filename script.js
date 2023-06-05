@@ -1,3 +1,54 @@
+var HPGet;
+var AttackGet;
+var DefenseGet;
+var SpAttackGet;
+var SpDefenseGet;
+var SpeedGet;
+
+document.getElementById("submit").addEventListener("click", onClick);
+
+function onClick() {
+  getHP();
+  getAttack();
+  getDefense();
+  getSpAttack();
+  getSpDefense();
+  getSpeed();
+  addData();
+};
+
+
+function getHP() {
+    HPGet = document.getElementById("HP").value;
+    console.log(HPGet);
+}
+
+function getAttack() {
+    AttackGet = document.getElementById("Attack").value;
+    console.log(AttackGet);
+}
+
+function getDefense() {
+    DefenseGet = document.getElementById("Defense").value;
+    console.log(DefenseGet);
+}
+
+function getSpAttack() {
+    SpAttackGet = document.getElementById("Sp.Attack").value;
+    console.log(SpAttackGet);
+}
+
+function getSpDefense() {
+    SpDefenseGet = document.getElementById("Sp.Defense").value;
+    console.log(SpDefenseGet);
+}
+
+function getSpeed() {
+    SpeedGet = document.getElementById("Speed").value;
+    console.log(SpeedGet);
+}
+
+
 let myChart = document.getElementById("myChart").getContext("2d");
 
 Chart.defaults.font.family="Lato";
@@ -12,7 +63,7 @@ let pokemonStatChart = new Chart(myChart,{
         datasets:[{
             label:"Input Mon",
             data:[
-                80, 82, 83, 100, 100, 80
+                100,100,100,100,100,100
             ],
             backgroundColor:["rgba(101, 173, 226, 0.5)", "navy"],
             borderColor:"black",
@@ -47,3 +98,26 @@ let pokemonStatChart = new Chart(myChart,{
         }
     }
 }); 
+
+function addData(){
+    pokemonStatChart.data.datasets[0].data[0] = HPGet;
+    pokemonStatChart.data.labels[0] = "HP";
+
+    pokemonStatChart.data.datasets[0].data[1] = AttackGet;
+    pokemonStatChart.data.labels[1] = "Attack";
+
+    pokemonStatChart.data.datasets[0].data[2] = DefenseGet;
+    pokemonStatChart.data.labels[2] = "Defense";
+
+    pokemonStatChart.data.datasets[0].data[3] = SpAttackGet;
+    pokemonStatChart.data.labels[3] = "Sp.Attack";
+
+    pokemonStatChart.data.datasets[0].data[4] = SpDefenseGet;
+    pokemonStatChart.data.labels[4] = "Sp.Defense";
+
+    pokemonStatChart.data.datasets[0].data[5] = SpeedGet;
+    pokemonStatChart.data.labels[5] = "Speed";
+    
+    
+    pokemonStatChart.update();
+}
