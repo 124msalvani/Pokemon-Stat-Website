@@ -6,7 +6,6 @@ var SpDefenseGet;
 var SpeedGet;
 
 document.getElementById("submit").addEventListener("click", onClick);
-
 function onClick() {
   getHP();
   getAttack();
@@ -16,38 +15,30 @@ function onClick() {
   getSpeed();
   addData();
 };
-
-
 function getHP() {
     HPGet = document.getElementById("HP").value;
     console.log(HPGet);
 }
-
 function getAttack() {
     AttackGet = document.getElementById("Attack").value;
     console.log(AttackGet);
 }
-
 function getDefense() {
     DefenseGet = document.getElementById("Defense").value;
     console.log(DefenseGet);
 }
-
 function getSpAttack() {
     SpAttackGet = document.getElementById("Sp.Attack").value;
     console.log(SpAttackGet);
 }
-
 function getSpDefense() {
     SpDefenseGet = document.getElementById("Sp.Defense").value;
     console.log(SpDefenseGet);
 }
-
 function getSpeed() {
     SpeedGet = document.getElementById("Speed").value;
     console.log(SpeedGet);
 }
-
 
 let myChart = document.getElementById("myChart").getContext("2d");
 let myChart2 = document.getElementById("myChart2").getContext("2d");
@@ -55,14 +46,12 @@ let myChart2 = document.getElementById("myChart2").getContext("2d");
 Chart.defaults.font.family="Lato";
 Chart.defaults.font.size= 18;
 Chart.defaults.color= "black"; 
-
-
 let pokemonStatChart = new Chart(myChart,{
     type: "radar", //bar, horizontalBar, pie, line, doughnut, radar. polarArea
     data: {
         labels:["HP", "Attack","Defense", "Special Attack", "Special Defense", "Speed", ],
         datasets:[{
-            label:"Input Mon",
+            label:"Your Pokemon",
             data:[
                 100,100,100,100,100,100
             ],
@@ -99,14 +88,12 @@ let pokemonStatChart = new Chart(myChart,{
         }
     }
 }); 
-
-
 let pokemonStatChart2 = new Chart(myChart2,{
     type: "radar", //bar, horizontalBar, pie, line, doughnut, radar. polarArea
     data: {
         labels:["HP", "Attack","Defense", "Special Attack", "Special Defense", "Speed", ],
         datasets:[{
-            label:"Input Mon",
+            label:"Your Pokemon",
             data:[
                 100,100,100,100,100,100
             ],
@@ -143,13 +130,12 @@ let pokemonStatChart2 = new Chart(myChart2,{
         }
     }
 }); 
-
 let pokemonStatChart3 = new Chart(myChart3,{
     type: "radar", //bar, horizontalBar, pie, line, doughnut, radar. polarArea
     data: {
         labels:["HP", "Attack","Defense", "Special Attack", "Special Defense", "Speed", ],
         datasets:[{
-            label:"Input Mon",
+            label:"Your Pokemon",
             data:[
                 100,100,100,100,100,100
             ],
@@ -186,7 +172,6 @@ let pokemonStatChart3 = new Chart(myChart3,{
         }
     }
 }); 
-
 function addData(){
     pokemonStatChart.data.datasets[0].data[0] = HPGet;
     pokemonStatChart.data.labels[0] = "HP";
@@ -246,3 +231,10 @@ function addData(){
     pokemonStatChart2.update();
     pokemonStatChart3.update();
 }
+
+document.getElementById("darkmode").addEventListener('click', darkmodeToggle);
+
+function darkmodeToggle() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }
