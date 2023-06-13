@@ -53,7 +53,7 @@ let pokemonStatChart = new Chart(myChart,{
         datasets:[{
             label:"Your Pokemon",
             data:[
-                100,100,100,100,100,100
+                50,50,50,50,50,50
             ],
             backgroundColor:["rgba(101, 173, 226, 0.5)", "navy"],
             borderColor:"black",
@@ -95,7 +95,7 @@ let pokemonStatChart2 = new Chart(myChart2,{
         datasets:[{
             label:"Your Pokemon",
             data:[
-                100,100,100,100,100,100
+                50,50,50,50,50,50
             ],
             backgroundColor:["rgba(101, 173, 226, 0.5)", "navy"],
             borderColor:"black",
@@ -137,7 +137,7 @@ let pokemonStatChart3 = new Chart(myChart3,{
         datasets:[{
             label:"Your Pokemon",
             data:[
-                100,100,100,100,100,100
+                50,50,50,50,50,50
             ],
             backgroundColor:["rgba(101, 173, 226, 0.5)", "navy"],
             borderColor:"black",
@@ -152,7 +152,7 @@ let pokemonStatChart3 = new Chart(myChart3,{
             // backgroundColor:["grey", pattern.draw('square', '#1f77b4'), "skyblue", "rgba(255, 231, 151, 0.8)", "rgba(18, 136, 116, 0.8)", 'rgba(255, 128, 7, 0.8)'],
             backgroundColor: [
                 "grey",
-                pattern.draw('triangle', 'rgba(239, 114, 29, 0.3)'),
+                pattern.draw('zigzag-horizontal', "rgba(38, 145, 0, 0.3)"),
                 /*pattern.draw('square', '#1f77b4'),
                 pattern.draw('circle', '#ff7f0e'),
                 pattern.draw('diamond', '#2ca02c'),
@@ -232,9 +232,10 @@ function addData(){
     pokemonStatChart3.update();
 }
 
-document.getElementById("darkmode").addEventListener('click', darkmodeToggle);
 
-function darkmodeToggle() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
- }
+/* not working function
+document.getElementById("pokeball").addEventListener('onclick', pokeballHover);
+function pokeballHover(){
+    var element = document.getElementById("pokeball");
+    element.classList.toggle("gradient-border");
+} */

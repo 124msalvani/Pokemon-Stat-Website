@@ -1,8 +1,10 @@
-.dark-mode {
-    background-color: black;
-    color: white;
-    border-color: white;
-  }
+.navbar{
+    position: fixed;
+    background-color: #1D1F20;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
 
 #text1, .nav-link, h1{
     font-family: 'Unbounded', cursive, bold;
@@ -53,6 +55,10 @@ input:hover{
     background-color: navy;
 }
 
+.bg-grey{
+    background-color: #f2f2f2;
+}
+
 .border-1{
     border: 5px solid black;
 }
@@ -60,12 +66,14 @@ input:hover{
 font-family: 'Lora', serif;
 font-family: 'Unbounded', cursive; */
 
+
+/*Doesn't work with floating navbar*/
 .gradient-border {
     --borderWidth: 3px;
-    background: #1D1F20;
     position: relative;
     border-radius: var(--borderWidth);
   }
+
   .gradient-border:after {
     content: '';
     position: absolute;
